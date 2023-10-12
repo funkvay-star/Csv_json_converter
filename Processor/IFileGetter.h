@@ -11,16 +11,16 @@ public:
         cleanupCache(); 
     }
 
-    // Pure virtual method to open a file stream to a single file
+    // open a file stream to a single file
     virtual void getFile() = 0;
 
-    // Pure virtual method to retrieve the opened file stream
+    // retrieve the opened file stream
     virtual std::ifstream& retrieveFile() = 0;
 
-    // Pure virtual method to remove the fetched file
+    // remove the fetched file
     virtual void removeFile() = 0;
 
-    // Pure virtual method to clean up any cached data (like closing the file stream)
+    // clean up any cached data (like closing the file stream)
     virtual void cleanupCache() = 0;
 };
 

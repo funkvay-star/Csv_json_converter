@@ -1,18 +1,15 @@
-#ifndef LOCALGETTER_H
-#define LOCALGETTER_H
+#ifndef GCPGETTER_H
+#define GCPGETTER_H
 
 #include "IFileGetter.h"
-#include <fstream>
-#include <string>
 
-class LocalGetter : public IFileGetter 
+class GCPGetter : public IFileGetter 
 {
 private:
     std::ifstream fileStream;  // Cached file stream
-    std::string cachedFilePath;
 
 public:
-    ~LocalGetter() override;
+    ~GCPGetter() override;
 
     void getFile() override;
     std::ifstream& retrieveFile() override;
@@ -20,4 +17,4 @@ public:
     void cleanupCache() override;
 };
 
-#endif // LOCALGETTER_H
+#endif // GCPGETTER_H

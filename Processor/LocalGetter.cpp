@@ -6,7 +6,8 @@ LocalGetter::~LocalGetter()
     cleanupCache();
 }
 
-void LocalGetter::getFile() {
+void LocalGetter::getFile() 
+{
     const std::string directoryPath = "../BackendAndFrontend/Files";
     for (const auto &entry : std::filesystem::directory_iterator(directoryPath)) 
     {

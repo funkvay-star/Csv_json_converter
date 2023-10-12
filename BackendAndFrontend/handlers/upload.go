@@ -15,7 +15,7 @@ func UploadHandler(w http.ResponseWriter, r *http.Request, directoryPath string)
     fg := fileops.NewFileGetter()
     file, header, err := fg.GetFile(r)
     if err != nil {
-        fmt.Println("Error getting file from request:", err) // <-- Log the error
+        fmt.Println("Error getting file from request:", err)
         http.Error(w, "Unable to parse form", http.StatusBadRequest)
         return
     }
@@ -23,7 +23,7 @@ func UploadHandler(w http.ResponseWriter, r *http.Request, directoryPath string)
 
     fu := fileops.NewFileUploader(directoryPath)
     if err := fu.SaveFile(file, header); err != nil {
-        fmt.Println("Error saving file:", err) // <-- Log the error
+        fmt.Println("Error saving file:", err)
         http.Error(w, "Error saving file", http.StatusInternalServerError)
         return
     }
