@@ -2,7 +2,8 @@
 #define LOCALGETTER_H
 
 #include "IFileGetter.h"
-#include <fstream>
+#include <filesystem>
+#include <iostream>
 #include <string>
 
 class LocalGetter : public IFileGetter 
@@ -15,6 +16,7 @@ public:
     ~LocalGetter() override;
 
     void getFile() override;
+    std::string getFileName() override;
     std::ifstream& retrieveFile() override;
     void removeFile() override;
     void cleanupCache() override;

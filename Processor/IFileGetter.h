@@ -14,6 +14,8 @@ public:
     // open a file stream to a single file
     virtual void getFile() = 0;
 
+    virtual std::string getFileName() = 0;
+
     // retrieve the opened file stream
     virtual std::ifstream& retrieveFile() = 0;
 
