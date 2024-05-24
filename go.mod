@@ -1,3 +1,3 @@
 module Csv_json_converter
 
-go 1.21.2
+go 1.18
