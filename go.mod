@@ -1,3 +1,3 @@
-module Converter
+module Csv_json_converter
 
 go 1.21.2
